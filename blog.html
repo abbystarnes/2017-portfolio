@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <a href="">Skip to Main Content</a>
+            <a href=""><h1>Abby Starnes</h1></a>
+            <ul>
+                <li><a href="">JSFIDDLE</a></li>
+                <li><a href="">GITHUB</a></li>
+            </ul>
+            <nav>
+                <li><a href="">About</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </nav>
+
+        <body>
+            <h2>Blog</h2>
+            <article>
+                <p>Aug 29</p>
+                <h3>Notes on Flexbox</h3>
+                <p>When I first heard about Flexbox, it was not being widely used and was more of a fun idea of what web development would be like in the future. It was hope for liberation from <i>floating</i> and <i>display: inline-blocking</i> elements to arrange them on the page.</p>
+                <p>Recently, however, I overheard a couple of front end developers discussing whether Flexbox or Susy was better for building on a grid, and I realized Flexbox has become standard practice. I hope to compare the two, but started by getting a rundown on Flexbox.</p>
+                <p>I read through the CSS-Tricks Guide to Flexbox:</p>
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+                <p>From there, I established a quick getting started and list of available properties:</p>
+                <ol>
+                    <li>create a container with items inside. Flex box properties are applied to items relative to their container (just like positioning something absolute is relative to the parent container)</li>
+                    <li>set a height and width to the flex-items. give flex-container and flex-items a background-color/border and number so you keep track of them while you work.</li>
+                    <li>set flex-container to ‘display: flex;’. This is the basis for all of the flex properties.</li>
+                    <li>
+                        <p>play with <b>Properties</b>:</p>
+                        <h4>Container Properties (Flex Container)</h4>
+                        <ul>
+                            <li>
+                                <p><b>*set it up*</b></p>
+                                <p>display: flex;</p>
+                            </li>
+                            <li>
+                                <p><b>*row/column/reverse*</b></p>
+                                <p>flex-direction: row | row-reverse | column | column-reverse;</p>                               
+                            </li>
+                            <li>
+                                <p><b>*wrap it?*</b></p>
+                                <p>flex-wrap: nowrap | wrap | wrap-reverse;</p>                                
+                            </li>
+                            <li>
+                                <p><b>*combo: row/column/reverse &amp; wrap it*
+</b></p>
+                                <p>flex-flow: <‘flex-direction’> || <‘flex-wrap’>;</p>                           
+                            </li>
+                            <li>
+                                <p><b>*justify (like text paragraphs)*</b></p>
+                                <p>justify-content: flex-start | flex-end | center | space-between | space-around;</p>                          
+                            </li>
+                            <li>
+                                <p><b>*align individual items (like aligning an object in photoshop)*</b></p>
+                                <p>align-items: flex-start | flex-end | center | baseline | stretch;</p>                               
+                            </li>
+                            <li>
+                                <p><b>*align all items (like aligning grouped items in photoshop)*</b></p>
+                                <p>align-content: flex-start | flex-end | center | space-between | space-around | stretch;</p>                             
+                            </li>
+                        </ul>
+                        <h4>Child Properties (Flex Items)</h4>
+                        <ul>
+                            <!-- make code readable in html -->
+                            <li>
+                                <p><b>*change order of items (default is order in html/markup)*</b></p>
+                                <p>order: <integer>;</p>
+                                <p>*** tricky/not intuitive: setting dominance of the item, like with z-index. eg. if you have 3 items set as a 2, they will stay in their original (html markup) order, in front of any items set to 1 (default) ***</p>
+                            </li>
+                            <li>
+                                <p><b>*assign item a proportion of space to grow into*</b></p>
+                                <p>flex-grow: <number>; /* default 0 */</p>
+                            </li>
+                            <li>
+                                <p><b>*assign item a proportion of space to shrink into*</b></p>
+                                <p>flex-shrink: <number>; /* default 1 */</p>
+                                <p>*** had trouble getting this property to apply ***</p>
+                            </li>
+                            <li>
+                                <p><b>*default size of element before remaining space is distributed*</b></p>
+                                <p>flex-basis: <length> | auto; /* default auto */</p>
+                                <p>e.g length 20% or 5rem, auto means “look at my width or height property”</p>
+                                <p>0 = extra space around content not factored in</p>
+                                <p>auto = extra space distributed based on flex-grow value</p>
+                            </li>
+                            <li>
+                                <p><b>*combo: flex-grow, flex-shrink and flex-basis combined*</b></p>
+                                <p>flex: none | [ <’flex-grow’> <’flex-shrink’>? || <’flex-basis’> ]</p>
+                                <p>align-self: auto | flex-start | flex-end | center | baseline | stretch;</p>
+                            </li>
+                        </ul>
+                        <p>I played around with these all in a jsfiddle:</p>
+                        <a href="">link to jsfiddle</a>
+                        <script async src="//jsfiddle.net/ordette/4o01rj4v/embed/"></script>
+                        <p>After getting an understanding of the purpose of each property, I went through the Flexbox Froggy game to review:</p>
+                        <a href="http://flexboxfroggy.com/">http://flexboxfroggy.com/</a>
+                        <p>I am excited to try out Flexbox in a project to see how it all comes together to build a project on a precise grid. I plan on looking into Susy soon, so I can compare.</p>
+                    </li>
+                </ol>
+            </article>
+            <article>
+                <p>Aug 24</p>
+                <h3>Notes on Accessibility for Front End Dev</h3>
+                <p>I checked out Apple’s built in text reader, VoiceOver, this morning.</p>
+                <p>Although I knew to use alt text for images, this was my first time actually using any sort of <b>screenreader</b>. I fumbled eyes half-open through the how-to guide, and still couldn’t figure out how to maneuver around. After a while I got so frustrated hearing the sped-up, robotic voice repeating at my every click <i>that I put it on mute</i>.</p>
+                <p>Next, I did some googling and found a great intro to accessible dev:</p>
+                <a href="http://webaim.org/intro/">http://webaim.org/intro/</a>
+                <p>And from there gleaned basic guidelines for building accessibly:</p>
+                <ol>
+                    <li>use <b>alt tags</b>
+                    <li>appropriate <b>document structure</b>, which you can check using <b>w3’s validator</b> (<a href="https://validator.w3.org/">https://validator.w3.org/</a>)</li>
+                    <li>use table headers in tables</li>
+                    <li>make sure all form fields are labeled with a <label> element</li>
+                    <li>make sure user can <b>submit</b> forms and <b>recover</b> from any errors (eg. failure to fill in all required fields)</li>
+                    <li>make sure all link text makes sense out of context (eg. ‘upcoming events’ vs. ‘click here’)</li>
+                    <li>allow users to skip to main content on page (past repeated elements like nav). Usually accomplished with a <b>’Skip to Main Content’ or ‘Skip Navigation’ link at the top of the page</b> which jumps to main content</li>
+                    <li>don’t rely on color to convey information</li>
+                    <li>make sure content is clearly written and easy to read (clear fonts, using headings and lists appropriately) When in doubt, use natively available fonts: Arial, Book Antiqua, Comic Sans MS (or not), Georgia, Courier New, Tahoma, Times New Roman, Trebuchet MS, Verdana</li>
+                    <li>lengthy navs: make sure subnav/entire menu system is NOT accessible by screenreader, but instead provide standard links at top level menu item that link to a secondary page with next level of links</li>
+                    <li>design to standards. separate content from presentation by keeping CSS on it’s own page from html</li>
+                    <li>
+                        <p>make javascript accessible (ie. not requiring use of a mouse)</p>
+                        <p>trigger changes with a standard link, and use device independent handlers or combine mouse and keyboard dependent event handlers to ensure accessibility</p>
+                        <ul>
+                            <li>
+                                <p><b>device independent handlers:</b> onFocus, onBlur, onSelect, onChange, and onClick*</p>
+                                <p>*onClick has Enter key alternative on standard link and control elements, however on plain text, table cells or divs, it is necessary to detect enter and space key presses while focused on the element</p>
+                            </li>
+                            <li><b>mouse dependent:</b> onMouseOver, onMouseOut, and onDblClick</li>
+                            <li><b>keyboard dependent:</b> onKeyDown, onKeyUp</li>
+                        </ul>
+                        <p>TLDR: press CMD + F5 on a mac to try out the text reader, 12 step checklist to make front end code accessible</p>
+                    </li>
+                </ol>
+
+            </article>
+            <article>
+                <p>Aug 23</p>
+                <h3>SVG Animation, Testing the Waters</h3>
+                <p>This morning as one of my learning goals (and after an inspiring talk by Sarah Drasner), I decided to give svg animation a trial run. I followed this tutorial:</p>
+                <a href="https://css-tricks.com/animating-svg-css/">https://css-tricks.com/animating-svg-css/</a>
+                <p>And here's my result:</p>
+                <a href="http://jsfiddle.net/amstar/qLzgvrmL/">http://jsfiddle.net/amstar/qLzgvrmL/</a>
+                <script async src="//jsfiddle.net/amstar/qLzgvrmL/embed/"></script>
+                <p>Struggles: I had some issues with the header letters. Each are supposed to animate separately, but for some reason the css wouldn’t apply to individual letter paths.</p>
+                <h4>TIL:</h4>
+                <ul>
+                    <li>you can apply classes to elements in an svg just like html</li>
+                    <li>there’s this useful command line tool for optimizing svgs: <a href="https://github.com/svg/svgo">https://github.com/svg/svgo</a> (super easy to install and use)</li>
+                </ul>
+
+            </article>
+            
+        </body>
+
+  
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

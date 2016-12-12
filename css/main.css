@@ -1,0 +1,207 @@
+.wrapper {
+  padding: 0 5%;
+  margin: 0 auto;
+  position: relative; }
+
+header {
+  padding-bottom: 2em;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: block;
+  background-opacity: .2; }
+
+.hidden {
+  margin-left: -9999px;
+  visibility: hidden; }
+
+a {
+  text-decoration: none;
+  color: #4178BE !important;
+  cursor: pointer; }
+  a:hover, a:focus {
+    cursor: pointer; }
+
+body {
+  font-size: 100%;
+  font-family: "helvetica neue"; }
+
+h1, h2, h3, p, a {
+  color: #0D1111; }
+
+h1 {
+  font-size: 3.157em;
+  text-align: center;
+  color: #0D1111;
+  margin-top: 1em; }
+
+h2 {
+  font-size: 2.369em;
+  display: block;
+  vertical-align: center;
+  text-align: middle; }
+
+nav {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  right: 0; }
+  nav li {
+    padding-left: 1.5em;
+    padding-top: 1em; }
+
+h3 {
+  font-size: 1.777em; }
+
+p {
+  font-size: 1em;
+  line-height: 1.5; }
+
+.logo {
+  height: 2.369em;
+  float: left;
+  clear: left;
+  vertical-align: center;
+  line-height: 2.369em;
+  text-align: middle; }
+
+li {
+  list-style-type: none; }
+
+.wrapper-main {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: wrap;
+  margin: 0 auto; }
+
+main {
+  margin-bottom: 4em; }
+
+.work {
+  flex: 100%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 100%;
+  text-align: center;
+  -webkit-box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13);
+  box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13); }
+  .work a {
+    height: 100%;
+    width: 100%;
+    display: block; }
+  .work h2 {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .work:first-child {
+    background-image: url("../img/ibm.png");
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .work:nth-child(2) {
+    background-image: url("../img/weddingwire.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .work:last-child {
+    background-image: url("../img/chernoffnewman.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.about__pic {
+  width: 200px; }
+
+.tagline {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -1.5em;
+  display: block; }
+
+.links {
+  display: none;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 100%;
+  max-width: 600px;
+  padding-left: 0;
+  justify-content: space-around;
+  text-align: center; }
+
+.header-index .links {
+  display: flex; }
+
+.links li {
+  flex: 50%;
+  width: 50%;
+  padding-top: 1.5em; }
+
+.links a:before {
+  padding-right: .5em; }
+
+.project {
+  margin-bottom: 4em; }
+
+.projectList {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .projectList li {
+    flex: 100%;
+    line-height: 1.5; }
+
+.logo {
+  margin-right: 1em; }
+
+.contactInfo {
+  padding-left: 0; }
+  .contactInfo li {
+    line-height: 1.5; }
+
+@media only screen and (min-width: 600px) {
+  .links li {
+    flex: 25%;
+    width: 25%;
+    padding-top: 1.5em; }
+
+  .work:first-child {
+    background-size: 35%; }
+  .work:nth-child(2) {
+    background-size: 70%; }
+  .work:last-child {
+    background-size: 70%; } }
+@media only screen and (min-width: 823px) {
+  .header-index {
+    height: 70vh;
+    padding: 0; }
+
+  .header-index h1 {
+    font-size: 6.314em; }
+  .header-index p {
+    font-size: 1.777em;
+    margin-top: -2.5em; }
+
+  .main-index {
+    margin-bottom: 0; }
+
+  .main-index .work {
+    height: 30vh;
+    padding: 0; }
+
+  .work {
+    flex: 33.33%;
+    width: 33.33%; }
+
+  p {
+    max-width: 600px; } }
+.wrapper, .wrapper-main {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=main.css.map */
