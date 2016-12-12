@@ -81,8 +81,9 @@ main {
 
 .work {
   flex: 100%;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  /*padding-top: 3em;
+  padding-bottom: 3em;*/
+  height: 9em;
   width: 100%;
   text-align: center;
   -webkit-box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13);
