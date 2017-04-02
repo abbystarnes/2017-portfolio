@@ -7,12 +7,16 @@
 header {
 	//height: 75vh;
 	padding-bottom: 2em;
-	background-image: url('../img/hero.jpg');
+	background-image: url('../img/background2.jpg');
 	background-size: cover;
 	background-position: right;
 	background-repeat: no-repeat;
 	display: block;
 	background-opacity: .2;
+}
+
+header h1 {
+	color: #fff;
 }
 
 body {
@@ -175,7 +179,7 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 	text-align: center;
 	margin: 0 auto;
 	margin-top: -1.5em;
-
+	color: #fff;
 	display: block;
 }
 

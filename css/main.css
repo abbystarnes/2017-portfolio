@@ -5,12 +5,15 @@
 
 header {
   padding-bottom: 2em;
-  background-image: url("../img/hero.jpg");
+  background-image: url("../img/background2.jpg");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   display: block;
   background-opacity: .2; }
+
+header h1 {
+  color: #fff; }
 
 .hidden {
   margin-left: -9999px;
@@ -81,9 +84,8 @@ main {
 
 .work {
   flex: 100%;
-  /*padding-top: 3em;
-  padding-bottom: 3em;*/
-  height: 9em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   width: 100%;
   text-align: center;
   -webkit-box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13);
@@ -119,6 +121,7 @@ main {
   text-align: center;
   margin: 0 auto;
   margin-top: -1.5em;
+  color: #fff;
   display: block; }
 
 .links {
