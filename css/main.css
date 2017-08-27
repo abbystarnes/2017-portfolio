@@ -113,13 +113,13 @@ main {
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(2) {
-    background-image: url("../img/weddingwire.svg");
-    background-size: 90%;
+    background-image: url("../img/project-bg/shelter.png");
+    background-size: 105%;
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(3) {
-    background-image: url("../img/chernoffnewman.png");
-    background-size: 90%;
+    background-image: url("../img/project-bg/image_api.png");
+    background-size: 105%;
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(4) {
@@ -261,6 +261,23 @@ main {
   line-height: 1.5em;
   margin-bottom: .5em;
   display: block; }
+
+a {
+  text-decoration: underline; }
+
+.link-caption {
+  margin-top: 0; }
+
+.numbered-list {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: disc;
+  list-style-position: inside; }
+  .numbered-list li {
+    list-style-type: decimal; }
+
+.list-title {
+  margin-bottom: 0; }
 
 @media only screen and (min-width: 600px) {
   .links li {
