@@ -176,7 +176,7 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 
 	&:nth-child(2) {
 		background-image: url('../img/project-bg/shelter.png');
-		background-size: 105%;
+		background-size: 150%;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -189,25 +189,33 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 	}
 
 	&:nth-child(4) {
-		background-image: url('../img/chernoffnewman.png');
-		background-size: 90%;
+		background-image: url('../img/project-bg/reddit.png');
+		background-size: 135%;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
 
 	&:nth-child(5) {
-		background-image: url('../img/chernoffnewman.png');
-		background-size: 90%;
+		background-image: url('../img/project-bg/frogger.png');
+		background-size: 105%;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: bottom right;
 	}
 
-	&:nth-child(5) {
-		background-image: url('../img/chernoffnewman.png');
-		background-size: 90%;
+
+	&:nth-child(6) {
+		background-image: url('../img/project-bg/bar_chart.png');
+		background-size: 100%;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: center bottom;
 	}
+
+	// &:nth-child(7) {
+	// 	background-image: url('../img/project-bg/bar_chart.png');
+	// 	background-size: 100%;
+	// 	background-repeat: no-repeat;
+	// 	background-position: center bottom;
+	// }
 }
 
 
@@ -379,6 +387,7 @@ box-shadow: 0px 2px 9px 6px rgba(0,0,0,0.75);
 	line-height: 1.5em;
 	margin-bottom: .5em;
 	display: block;
+	max-width: 100px;
 }
 
 .screenshots .screenshot {
@@ -418,6 +427,11 @@ a {
 .list-title {
 	margin-bottom: 0;
 }
+
+.h1-link {
+	text-decoration: none;
+}
+
 @media only screen and (min-width:600px) {
 	body {
 		//background-color: green;

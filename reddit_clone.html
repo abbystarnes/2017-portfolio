@@ -28,7 +28,7 @@
                 <!-- <li><a href="https://medium.com/@abbymstarnes/">Blog Posts</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
             </nav>
-            <a href="index.html"><h1>Abby Starnes</h1></a>
+            <a class='h1-link' href="index.html"><h1>Abby Starnes</h1></a>
             <p class="tagline">web developer</p>
             <ul class="links">
                 <li><a class="" href="https://jsfiddle.net/user/ordette/fiddles"><i class="fa fa-jsfiddle "></i> JSFiddle</a></li>
@@ -77,8 +77,8 @@
                 <h3>Overview</h3>
                 <p>Reddit Clone is an Angular 1.6 CRUD (create, read, update, delete) Node.js Express application. This is a week-long individual assignment from the Angular unit of Galvanize's 24-week web development immersion course. The database is seeded
                     and queried using Knex.js.</p>
-                <a class='code-link' target="_blank" href="https://shelter-abby-starnes.herokuapp.com/">View Live <i class="fa fa-external-link" aria-hidden="true"></i></a>
-                <a class='code-link' target="_blank" href="https://github.com/abbystarnes/shelter">View Code <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <a class='code-link' target="_blank" href="https://abby-reddit-clone-3.herokuapp.com/">View Live <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <a class='code-link' target="_blank" href="https://github.com/abbystarnes/Galvanize-2017-reddit-clone-3">View Code <i class="fa fa-external-link" aria-hidden="true"></i></a>
             </article>
 
             <article class="project">
@@ -121,7 +121,7 @@
                 <p class="text">In the post-form controller, the form's submit button content is changed from 'Create Post' to 'Update Post' because a post with an id has been passed down from the post-edit component. In createNewPost() the post service's editPost()
                     function is called.</p>
                 <script src="https://gist.github.com/abbystarnes/5956f571ea566bbcaa61aabb70b01be9.js"></script>
-                <p>In the post service, the editPost() function makes a patch request to update the database with the user's edited post information. Afterwards, getPosts() function is called to request the updated version of the posts from the database,
+                <p>In the post service, the editPost() function makes a patch request to update the database with the user's edited post information. Afterwards, the getPosts() function is called to request the updated version of the posts from the database,
                     and the user is redirected to the post-list view.</p>
                 <p class="text"></p>
             </article>

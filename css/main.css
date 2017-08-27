@@ -114,7 +114,7 @@ main {
     background-position: center; }
   .work:nth-child(2) {
     background-image: url("../img/project-bg/shelter.png");
-    background-size: 105%;
+    background-size: 150%;
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(3) {
@@ -123,20 +123,20 @@ main {
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(4) {
-    background-image: url("../img/chernoffnewman.png");
-    background-size: 90%;
+    background-image: url("../img/project-bg/reddit.png");
+    background-size: 135%;
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(5) {
-    background-image: url("../img/chernoffnewman.png");
-    background-size: 90%;
+    background-image: url("../img/project-bg/frogger.png");
+    background-size: 105%;
     background-repeat: no-repeat;
-    background-position: center; }
-  .work:nth-child(5) {
-    background-image: url("../img/chernoffnewman.png");
-    background-size: 90%;
+    background-position: bottom right; }
+  .work:nth-child(6) {
+    background-image: url("../img/project-bg/bar_chart.png");
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center bottom; }
 
 .about__pic {
   width: 200px; }
@@ -262,7 +262,8 @@ main {
 .code-link {
   line-height: 1.5em;
   margin-bottom: .5em;
-  display: block; }
+  display: block;
+  max-width: 100px; }
 
 .screenshots .screenshot {
   border: none;
@@ -289,6 +290,9 @@ a {
 
 .list-title {
   margin-bottom: 0; }
+
+.h1-link {
+  text-decoration: none; }
 
 @media only screen and (min-width: 600px) {
   .links li {
