@@ -5,15 +5,19 @@
 
 header {
   padding-bottom: 2em;
-  background-image: url("../img/4.jpg");
+  background-image: linear-gradient(rgba(65, 120, 190, 0.45), rgba(65, 120, 190, 0.45)), url("../img/bg-placeholder.png");
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   display: block;
   background-opacity: .2; }
+  header a {
+    color: #fff; }
 
 header h1 {
-  color: #fff; }
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Lobster', cursive; }
 
 .hidden {
   margin-left: -9999px;
@@ -21,14 +25,14 @@ header h1 {
 
 a {
   text-decoration: none;
-  color: #4178BE !important;
+  color: #4178BE;
   cursor: pointer; }
   a:hover, a:focus {
     cursor: pointer; }
 
 body {
   font-size: 100%;
-  font-family: "helvetica neue"; }
+  font-family: 'Open Sans Condensed', sans-serif; }
 
 h1, h2, h3, p, a {
   color: #0D1111; }
@@ -36,8 +40,13 @@ h1, h2, h3, p, a {
 h1 {
   font-size: 3.157em;
   text-align: center;
-  color: #0D1111;
-  margin-top: 1em; }
+  color: #0D1111; }
+
+.header-content {
+  height: 50%;
+  margin-top: 20%; }
+  .header-content a {
+    color: #fff; }
 
 h2 {
   font-size: 2.369em;
@@ -99,8 +108,8 @@ main {
     margin-top: 0;
     margin-bottom: 0; }
   .work:first-child {
-    background-image: url("../img/ibm.png");
-    background-size: 45%;
+    background-image: url("../img/project-bg/budgie.png");
+    background-size: 105%;
     background-repeat: no-repeat;
     background-position: center; }
   .work:nth-child(2) {
@@ -155,6 +164,9 @@ main {
 .header-index .links {
   display: flex; }
 
+.subtitle {
+  margin-top: -2em; }
+
 .links li {
   flex: 50%;
   width: 50%;
@@ -178,6 +190,9 @@ main {
 .logo {
   margin-right: 1em; }
 
+.screencast {
+  max-width: 100%; }
+
 .contactInfo {
   padding-left: 0; }
   .contactInfo li {
@@ -193,7 +208,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-between; }
   .screenshots .screenshot {
     flex: 1;
     width: 100%;
@@ -205,21 +220,56 @@ main {
       display: block;
       margin: 0 auto; }
 
+.tech-list {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  padding-left: 0;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .tech-list li p {
+    position: absolute;
+    display: none;
+    opacity: 0; }
+  .tech-list li:hover p {
+    opacity: 1;
+    display: block;
+    background-color: white;
+    z-index: 2;
+    padding: 1em; }
+
+.tech {
+  position: relative;
+  margin-left: .5em;
+  margin-right: .5em;
+  margin-bottom: 1em;
+  flex: 1;
+  height: 3em;
+  vertical-align: middle; }
+
+.tech-express {
+  height: 1.5em; }
+
+.text {
+  margin-bottom: 2em; }
+
+.caption {
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.code-link {
+  line-height: 1.5em;
+  margin-bottom: .5em;
+  display: block; }
+
 @media only screen and (min-width: 600px) {
   .links li {
     flex: 25%;
     width: 25%;
-    padding-top: 1.5em; }
-
-  .work:first-child {
-    background-size: 35%; }
-  .work:nth-child(2) {
-    background-size: 70%; }
-  .work:last-child {
-    background-size: 70%; } }
+    padding-top: 1.5em; } }
 @media only screen and (min-width: 823px) {
   .header-index {
-    height: 70vh;
+    height: 100vh;
     padding: 0; }
 
   .header-index h1 {
