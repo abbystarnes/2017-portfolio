@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shelter: A CRUD Application Built With Petfinder's API</title>
+    <title>Reddit Clone</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,13 +42,16 @@
     <main>
 
         <div class="wrapper">
-            <h2>Shelter</h2>
-            <p class="subtitle">A CRUD Application Built with Petfinder's API</p>
+            <h2>Reddit Clone</h2>
+            <p class="subtitle">An Angular CRUD Application with a PostgreSQL Database</p>
 
             <article class="project">
                 <!-- <img  class="logo" src="" alt="IBM Analytics Platform Style Guide"> -->
                 <h3>Technologies</h3>
                 <ul class='tech-list'>
+                    <li><img class='tech' src="img/technologies/angularjs.png" alt="">
+                        <p>AngularJS</p>
+                    </li>
                     <li><img class='tech' src="img/technologies/nodejs.png" alt="">
                         <p>NodeJS</p>
                     </li>
@@ -58,11 +61,11 @@
                     <li><img class='tech' src="img/technologies/postgresql.png" alt="">
                         <p>PostgreSQL</p>
                     </li>
-                    <li><img class='tech' src="img/technologies/petfinder.svg" alt="">
-                        <p>Petfinder API</p>
+                    <li><img class='tech' src="img/technologies/knex.png" alt="">
+                        <p>Knex.js</p>
                     </li>
-                    <li><img class='tech' src="img/technologies/materialize.png" alt="">
-                        <p>Materialize</p>
+                    <li><img class='tech' src="img/technologies/bootstrap.png" alt="">
+                        <p>Bootstrap</p>
                     </li>
                     <li><img class='tech' src="img/technologies/heroku.png" alt="">
                         <p>Heroku</p>
@@ -72,27 +75,37 @@
 
             <article class="project">
                 <h3>Overview</h3>
-                <p>Shelter is a CRUD (create, read, update, delete) Node.js Express application. This is a week-long individual project from quarter 2 of Galvanize's 24-week web development immersion course. Shelter displays data on Austin Pets Alive! shelter
-                    animals gathered via Petfinder's API. I implemented user authentication by using hashed passwords, cookies and Oauth via Google's authentication library. Shelter features a PostgreSQL database and is deployed to Heroku.</p>
+                <p>Reddit Clone is an Angular 1.6 CRUD (create, read, update, delete) Node.js Express application. This is a week-long individual assignment from the Angular unit of Galvanize's 24-week web development immersion course. The database is seeded
+                    and queried using Knex.js.</p>
                 <a class='code-link' target="_blank" href="https://shelter-abby-starnes.herokuapp.com/">View Live <i class="fa fa-external-link" aria-hidden="true"></i></a>
                 <a class='code-link' target="_blank" href="https://github.com/abbystarnes/shelter">View Code <i class="fa fa-external-link" aria-hidden="true"></i></a>
             </article>
 
             <article class="project">
-                <h3>User Authentication</h3>
-                <script src="https://gist.github.com/abbystarnes/b2ca902a127f276eff6788f6bf8a4fc2.js"></script>
-                <p class="text">If user logs in with Gmail, an external dialogue opens and allows the user to login to their Gmail account. Upon successful login, the users information is passed to the front end javascript file's onSignIn() function (below) for processing.
-                    Afterwards, whenever the user is logged in to their Gmail account, they have frictionless access to their account. If the user chooses to log in using their email and password, the form information is submitted to the /login_local
-                    route (below) for processing via a post request.
+                <h3>Seperation of Concerns In Angular</h3>
+                <p>Learning how to structure an AngularJS application was one of my biggest takeaways from this project.</p>
+                <div class="screenshots">
+                    <div class="screenshot screenshot-files">
+                        <img src="img/screenshots/file_structure_reddit.png" alt="reddit clone file structure">
+                        <p class="caption">The application architecture is compartmentalized by component type (e.g. the post components), rather than by services, controllers and templates. This places related content together, making it easier to find a component's associated
+                            service and template.</p>
+                    </div>
+                </div>
+                <script src="https://gist.github.com/abbystarnes/8764bd1f3a33399cbd7e2446db590e27.js"></script>
+                <p class="text">The comments component displays post comments to the view. On initialization, the comments component renders the comments template with content retreived using the comment service function getComments(). When the comments component's updateComments()
+                    function is called in the comments template, it uses the comment service functions getComments() and addComment() to add the user's new comment to the database and render the updated comments.</p>
+                <script src="https://gist.github.com/abbystarnes/88a306aaecec82268642542e268170d9.js"></script>
+                <p class="text">Any functions that make requests to query the database are seperated out into the comments service. Here getComments() retreives the comments currently in the database, while addComments() inserts a new comment into the database. The service
+                    also stores the comments retreived from the most recent database query. This allows multiple components to receive the same data from a single source of truth (eg. in posts, where the post-edit, post-form, post-list and post-single
+                    components alll draw on the post service to obtain current data).
                 </p>
-                <script src="https://gist.github.com/abbystarnes/a79277451c341d9ad8339cb7d216111e.js"></script>
-                <p class="text">In the front-end Javascript, onSignIn() takes the user's Gmail account information and passes their email and id token to the /login_gmail route via a post XMLHttpRequest. The getCookie() function parses the current cookie to obtain the
-                    user's authentication information.
-                </p>
-                <script src="https://gist.github.com/abbystarnes/e7b9440fb2e594610b3c340e2aa135fa.js"></script>
-                <p class="text">The /logout route empties the user's cookies, which logs them out and prevents protected elements from rendering to the page. The /login_gmail route validate's the user's id token. If the user's credentials are valid, a cookie is set with
-                    the user's permission level and email. The /login_local route checks the user's password against the stored hashed password associated with their email. If the password or email is invalid, the post request resolves with a 404 and
-                    the user sees an error message. Otherwise, once their credentials are validated the user is rerouted to the pets page.</p>
+                <script src="https://gist.github.com/abbystarnes/2252ca0b9c2be4883ce0d8eeada8505c.js"></script>
+                <p class="text">The comments template uses two-way data binding to render a live view of the comments. If the user submits a new comment, the controller's updateComments() function is called. This updates the comments in the database to include the new
+                    comment, and the results are immediately reflected in the view.</p>
+            </article>
+            <article class="project">
+                <h3>Data Binding</h3>
+
             </article>
         </div>
 
