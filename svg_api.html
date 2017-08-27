@@ -63,7 +63,7 @@
 
             <article class="project">
                 <h3>Overview</h3>
-                <p>This is Node Express application API deployed to Heroku. It allows users generate randomized SVG Images based on a given seed value. This is an individual project. I submitted it as my final project for <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">cs50x Introduction to Computer Science</a>.</p>
+                <p>This is a Node Express application API deployed to Heroku. It allows users to generate randomized SVG Images based on a given seed value. This is an individual project. I submitted it as my final project for <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">cs50x Introduction to Computer Science</a>.</p>
                 <a class='code-link' target="_blank" href="https://shelter-abby-starnes.herokuapp.com/creature/seed_value">Try It Out <i class="fa fa-external-link" aria-hidden="true"></i></a>
                 <p class='link-caption'>(change the 'seed_value' at the end of the url to generate a new image)</p>
                 <a class='code-link' target="_blank" href="https://github.com/abbystarnes/frogger-api">View Code <i class="fa fa-external-link" aria-hidden="true"></i></a>
@@ -83,58 +83,45 @@
                     <li>Ungroup</li>
                     <li>Clean up Image, deleting background &amp; unwanted paths</li>
                     <li>Export Image as SVG (check include art board)</li>
-                    <li>Open SVG file in text editor. Remove outer SVG tag and headers so that only the image paths and styles remain. Change each style class to be unique to the project directory (or else there will be conflicts when you merge the images
+                    <li>Open SVG file in text editor. Remove outer SVG header and footer so that only the image paths and styles remain. Change each style class to be unique to the project directory (or else there will be conflicts when you merge the images
                         together.)
                     </li>
                 </ol>
 
                 <div class="screenshots">
-                    <div class="screenshot">
-                        <img src="img/screenshots/ios-2.png" alt="wireframes for Budgie application">
-                        <p class="caption">User clicks camera icon to select receipt photo from device camera.</p>
+                    <div class="screenshot screenshot-svg">
+                        <img src="img/screenshots/lip1.svg" alt="SVG lip component">
+                        <img src="img/screenshots/lip2.svg" alt="SVG lip component">
+                        <img src="img/screenshots/lip3.svg" alt="SVG lip component">
+                        <img src="img/screenshots/lip4.svg" alt="SVG lip component">
+                        <p class="caption">SVG mouth components.</p>
                     </div>
-                    <div class="screenshot">
-                        <img src="img/screenshots/ios-4.png" alt="wireframes for Budgie application">
-                        <p class="caption">Device camera opens, allowing user to select a receipt photo.</p>
+                    <div class="screenshot screenshot-svg">
+                        <img src="img/screenshots/eye1.svg" alt="SVG lip component">
+                        <img src="img/screenshots/eye2.svg" alt="SVG lip component">
+                        <img src="img/screenshots/eye3.svg" alt="SVG lip component">
+                        <img src="img/screenshots/eye4.svg" alt="SVG lip component">
+                        <p class="caption">SVG eye components.</p>
                     </div>
-                    <div class="screenshot">
-                        <img src="img/screenshots/ios-6.png" alt="wireframes for Budgie application">
-                        <p class="caption">Receipt entry is autopopulated with items and prices from selected photo.</p>
+                    <div class="screenshot screenshot-svg">
+                        <img src="img/screenshots/body1.svg" alt="SVG lip component">
+                        <img src="img/screenshots/body2.svg" alt="SVG lip component">
+                        <img src="img/screenshots/body3.svg" alt="SVG lip component">
+                        <img src="img/screenshots/body4.svg" alt="SVG lip component">
+                        <p class="caption">SVG body components.</p>
                     </div>
                 </div>
-                <script src="https://gist.github.com/abbystarnes/d0e57b2f39d9325e46fbfc43e6e38f6b.js"></script>
-                <p class="text">The controller's takePicture() function requests access to mobile device's camera and returns selected image in base64 format. The image is then processed server-side, returning a list of receipt items and prices detected by Tesseract
-                    OCR.
-                </p>
-                <script src="https://gist.github.com/abbystarnes/2c0debcfdf0f46c8ba64756cfe12b679.js"></script>
-                <p class="text">On the server side, the base64 image is uploaded and written to a temporary PNG file. The image is then preprocessed with <a href="http://www.fmwconcepts.com/imagemagick/textcleaner/">an ImageMagick script</a> to increase accuracy, and
-                    the resulting TIF file is processed using Tesseract OCR. This returns a string of text, which is then parsed into receipt items and prices using a regular expression. The resulting lines are returned to the front-end as JSON.</p>
             </article>
 
             <article class="project">
                 <h3>Generating SVG Composite Image with Seed Value</h3>
-                <p class="text">This was my first time experimenting with OCR, and it was a lot of fun. I chose to use Tesseract because it is free and has substantial documentation.</p>
-                <div class="screenshots">
-                    <div class="screenshot">
-                        <img src="img/screenshots/ios-2.png" alt="wireframes for Budgie application">
-                        <p class="caption">User clicks camera icon to select receipt photo from device camera.</p>
-                    </div>
-                    <div class="screenshot">
-                        <img src="img/screenshots/ios-4.png" alt="wireframes for Budgie application">
-                        <p class="caption">Device camera opens, allowing user to select a receipt photo.</p>
-                    </div>
-                    <div class="screenshot">
-                        <img src="img/screenshots/ios-6.png" alt="wireframes for Budgie application">
-                        <p class="caption">Receipt entry is autopopulated with items and prices from selected photo.</p>
-                    </div>
-                </div>
-                <script src="https://gist.github.com/abbystarnes/d0e57b2f39d9325e46fbfc43e6e38f6b.js"></script>
-                <p class="text">The controller's takePicture() function requests access to mobile device's camera and returns selected image in base64 format. The image is then processed server-side, returning a list of receipt items and prices detected by Tesseract
-                    OCR.
-                </p>
-                <script src="https://gist.github.com/abbystarnes/2c0debcfdf0f46c8ba64756cfe12b679.js"></script>
-                <p class="text">On the server side, the base64 image is uploaded and written to a temporary PNG file. The image is then preprocessed with <a href="http://www.fmwconcepts.com/imagemagick/textcleaner/">an ImageMagick script</a> to increase accuracy, and
-                    the resulting TIF file is processed using Tesseract OCR. This returns a string of text, which is then parsed into receipt items and prices using a regular expression. The resulting lines are returned to the front-end as JSON.</p>
+                <p class="text">The user can input any seed as a get request parameter. I used seedrandom, a seeded random number generator for JS, to choose SVG component parts based on the user's chosen seed.</p>
+
+                <script src="https://gist.github.com/abbystarnes/8e0001e6ef8cf565b2de3e75514ef748.js"></script>
+                <p class="text">pickAPart() takes a number 1-10 and a part type (mouth, eye or body) and returns the corresponding part version (eg. 'mouth2.svg'). The route '/creature/:seed' takes any seed value as a get request parameter. It then uses seedrandom to
+                    generate 3 numbers based on the given seed. pickAPart() is then called with each number and corresponding part type. The resulting parts are concatenated into one long string. This string is written to a temporary SVG file. Then the
+                    request responds, returning the SVG string to the user.</p>
+
             </article>
             <article class="project">
                 <h3>Walk Through Screencast for cs50x</h3>
