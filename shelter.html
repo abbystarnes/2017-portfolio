@@ -89,7 +89,8 @@
                     route (below) for processing via a post request.
                 </p>
                 <script src="https://gist.github.com/abbystarnes/a79277451c341d9ad8339cb7d216111e.js"></script>
-                <p class="text">In the front-end Javascript, onSignIn() takes the user's Gmail account information and passes their email and id token to the /login_gmail route via an Post XMLHttpRequest.
+                <p class="text">In the front-end Javascript, onSignIn() takes the user's Gmail account information and passes their email and id token to the /login_gmail route via an Post XMLHttpRequest. The getCookie() function parses the current cookie to obtain the
+                    user's authentication information.
                 </p>
                 <script src="https://gist.github.com/abbystarnes/e7b9440fb2e594610b3c340e2aa135fa.js"></script>
                 <p class="text">On the server side, the base64 image is uploaded and written to a temporary PNG file. The image is then preprocessed with <a href="http://www.fmwconcepts.com/imagemagick/textcleaner/">an ImageMagick script</a> to increase accuracy, and
