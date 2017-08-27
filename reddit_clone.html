@@ -105,7 +105,25 @@
             </article>
             <article class="project">
                 <h3>Data Binding</h3>
-
+                <p class='text'>One of the challenges I faced was figuring out how to pass data between components. For example, in order to edit a post, the user would ideally see an edit form prepopulated with the post's current data. In order to show this view, I
+                    needed to pass the post id and and post from the post-single component to the post-edit component.</p>
+                <script src="https://gist.github.com/abbystarnes/60194373d3cdb116c6928df4de949121.js"></script>
+                <p>The acceptable variables for the post-edit component are defined in the the app.config.js file's $stateProvider. The id variable is defined in the url '/post/:id/edit', and the post variable is included in the params object.
+                </p>
+                <script src="https://gist.github.com/abbystarnes/9cb7e2f3931c21e8b77a8c0fbf676123.js"></script>
+                <p class="text">In the post-single template, there is a an 'edit' button. When clicked, user is rerouted to a view where they can edit the associated post. The post id and post are passed as variables from the post-single component to the post-edit component.</p>
+                <script src="https://gist.github.com/abbystarnes/745f2c9409c66b529532f56837dbdab7.js"></script>
+                <p class="text">In the post-edit template, the current post's title is displayed, and the post variable is passed once again, this time to the post-form component.</p>
+                <script src="https://gist.github.com/abbystarnes/0407d221a9bf60694578a9abef15f8c6.js"></script>
+                <p class="text">The post form is rendered with prepopulated data from the passed down post variable. Because the user is editing an existing post, the submit button says 'Update Post'. When the user submits the form, the controller's createNewPost() function
+                    is called.</p>
+                <script src="https://gist.github.com/abbystarnes/8efc84998eacc692696248f69258a696.js"></script>
+                <p class="text">In the post-form controller, the form's submit button content is changed from 'Create Post' to 'Update Post' because a post with an id has been passed down from the post-edit component. In createNewPost() the post service's editPost()
+                    function is called.</p>
+                <script src="https://gist.github.com/abbystarnes/5956f571ea566bbcaa61aabb70b01be9.js"></script>
+                <p>In the post service, the editPost() function makes a patch request to update the database with the user's edited post information. Afterwards, getPosts() function is called to request the updated version of the posts from the database,
+                    and the user is redirected to the post-list view.</p>
+                <p class="text"></p>
             </article>
         </div>
 
