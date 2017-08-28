@@ -3,6 +3,20 @@
   margin: 0 auto;
   position: relative; }
 
+#email {
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding-left: 0; }
+  #email i {
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-left: .25em;
+    transition: all .125s ease; }
+    #email i:hover, #email i:active, #email i:focus {
+      transition: all .125s ease;
+      color: rgba(0, 0, 0, 0.6); }
+
 header {
   padding-bottom: 2em;
   background-image: linear-gradient(rgba(24, 130, 145, 0.4), rgba(24, 130, 145, 0.8));
