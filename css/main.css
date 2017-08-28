@@ -5,7 +5,7 @@
 
 header {
   padding-bottom: 2em;
-  background-image: linear-gradient(rgba(65, 120, 190, 0.45), rgba(65, 120, 190, 0.45)), url("../img/bg-placeholder.png");
+  background-image: radial-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.4));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,6 +96,7 @@ main {
   padding-top: 3em;
   padding-bottom: 3em;
   width: 100%;
+  height: 100%;
   text-align: center;
   -webkit-box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 1px 11px 15px -11px rgba(0, 0, 0, 0.13);
@@ -111,32 +112,88 @@ main {
     background-image: url("../img/project-bg/budgie.png");
     background-size: 105%;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    position: relative; }
+    .work:first-child:after {
+      content: 'Budgie'; }
+    .work:first-child:hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/budgie.png");
+      background-size: 125%; }
   .work:nth-child(2) {
     background-image: url("../img/project-bg/shelter.png");
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: center; }
+    .work:nth-child(2):after {
+      content: 'Shelter'; }
+    .work:nth-child(2):hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/shelter.png");
+      background-size: 175%; }
   .work:nth-child(3) {
     background-image: url("../img/project-bg/image_api.png");
-    background-size: 105%;
+    background-size: 115%;
     background-repeat: no-repeat;
     background-position: center; }
+    .work:nth-child(3):after {
+      content: 'SVG Generating API'; }
+    .work:nth-child(3):hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/image_api.png");
+      background-size: 135%; }
   .work:nth-child(4) {
     background-image: url("../img/project-bg/reddit.png");
     background-size: 135%;
     background-repeat: no-repeat;
     background-position: center; }
+    .work:nth-child(4):after {
+      content: 'Reddit Clone'; }
+    .work:nth-child(4):hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/reddit.png");
+      background-size: 155%; }
   .work:nth-child(5) {
     background-image: url("../img/project-bg/frogger.png");
     background-size: 105%;
     background-repeat: no-repeat;
-    background-position: bottom right; }
+    background-position: center; }
+    .work:nth-child(5):after {
+      content: 'Frogger'; }
+    .work:nth-child(5):hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/frogger.png");
+      background-size: 125%; }
   .work:nth-child(6) {
     background-image: url("../img/project-bg/bar_chart.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom; }
+    .work:nth-child(6):after {
+      content: 'Bar Chart'; }
+    .work:nth-child(6):hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/bar_chart.png");
+      background-size: 125%; }
+
+.wrapper-main > .work {
+  transition: all .25s ease-in-out;
+  position: relative; }
+  .wrapper-main > .work:after {
+    pointer-events: none;
+    transition: all .25s ease-in-out;
+    line-height: 10;
+    font-size: 2em;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    opacity: 0; }
+  .wrapper-main > .work:hover {
+    transition: all .25s ease-in-out; }
+    .wrapper-main > .work:hover:after {
+      pointer-events: none;
+      transition: all .25s ease-in-out;
+      display: block;
+      opacity: 1; }
 
 .about__pic {
   width: 200px; }
@@ -314,7 +371,7 @@ a {
     margin-bottom: 0; }
 
   .main-index .work {
-    height: 30vh;
+    height: 50vh;
     padding: 0; }
 
   .work {
@@ -324,5 +381,5 @@ a {
   p {
     max-width: 600px; } }
 .wrapper, .wrapper-main {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto; }

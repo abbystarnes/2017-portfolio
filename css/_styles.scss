@@ -8,10 +8,10 @@
 header {
 	//height: 75vh;
 	padding-bottom: 2em;
-	background-image: linear-gradient(
-      rgba(65,120,190, 0.45),
-      rgba(65,120,190, 0.45)
-    ), url('../img/bg-placeholder.png');
+	background-image: radial-gradient(
+      rgba(24, 130, 145, 0.80),
+      rgba(24, 130, 145, 0.40)
+    );
 	// background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(0,0,59,0.55))); /* safari4+,chrome */
 	a {
 		color: #fff;
@@ -145,7 +145,7 @@ main {
 	padding-top: 3em;
 	padding-bottom: 3em;
 	width: 100%;
-	//height: 300px;
+	height: 100%;
 	text-align: center;
 	//border: 1px solid pink;
 	-webkit-box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
@@ -170,8 +170,17 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 		background-size: 105%;
 		background-repeat: no-repeat;
 		background-position: center;
-
-		//background-size: contain;
+		position:relative;
+		&:after {
+			content: 'Budgie';
+		}
+		&:hover {
+			background-image: linear-gradient(
+					rgba(24, 130, 145, 0.80),
+					rgba(24, 130, 145, 0.80)
+				), url('../img/project-bg/budgie.png');
+			background-size: 125%;
+		}
 	}
 
 	&:nth-child(2) {
@@ -179,13 +188,33 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 		background-size: 150%;
 		background-repeat: no-repeat;
 		background-position: center;
+		&:after {
+			content: 'Shelter';
+		}
+		&:hover {
+			background-image: linear-gradient(
+					rgba(24, 130, 145, 0.80),
+					rgba(24, 130, 145, 0.80)
+				), url('../img/project-bg/shelter.png');
+			background-size: 175%;
+		}
 	}
 
 	&:nth-child(3) {
 		background-image: url('../img/project-bg/image_api.png');
-		background-size: 105%;
+		background-size: 115%;
 		background-repeat: no-repeat;
 		background-position: center;
+		&:after {
+			content: 'SVG Generating API';
+		}
+		&:hover {
+			background-image: linear-gradient(
+					rgba(24, 130, 145, 0.80),
+					rgba(24, 130, 145, 0.80)
+				), url('../img/project-bg/image_api.png');
+			background-size: 135%;
+		}
 	}
 
 	&:nth-child(4) {
@@ -193,13 +222,33 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 		background-size: 135%;
 		background-repeat: no-repeat;
 		background-position: center;
+		&:after {
+			content: 'Reddit Clone';
+		}
+		&:hover {
+			background-image: linear-gradient(
+					rgba(24, 130, 145, 0.80),
+					rgba(24, 130, 145, 0.80)
+				), url('../img/project-bg/reddit.png');
+			background-size: 155%;
+		}
 	}
 
 	&:nth-child(5) {
 		background-image: url('../img/project-bg/frogger.png');
 		background-size: 105%;
 		background-repeat: no-repeat;
-		background-position: bottom right;
+		background-position: center;
+		&:after {
+			content: 'Frogger';
+		}
+		&:hover {
+			background-image: linear-gradient(
+					rgba(24, 130, 145, 0.80),
+					rgba(24, 130, 145, 0.80)
+				), url('../img/project-bg/frogger.png');
+			background-size: 125%;
+		}
 	}
 
 
@@ -208,6 +257,16 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center bottom;
+		&:after {
+			content: 'Bar Chart';
+		}
+		&:hover {
+			background-image: linear-gradient(
+					rgba(24, 130, 145, 0.80),
+					rgba(24, 130, 145, 0.80)
+				), url('../img/project-bg/bar_chart.png');
+			background-size: 125%;
+		}
 	}
 
 	// &:nth-child(7) {
@@ -216,6 +275,44 @@ box-shadow: 1px 11px 15px -11px rgba(0,0,0,0.13);
 	// 	background-repeat: no-repeat;
 	// 	background-position: center bottom;
 	// }
+}
+
+
+.wrapper-main > .work {
+	transition: all .25s ease-in-out;
+	position: relative;
+		&:after {
+			pointer-events:none;
+			transition: all .25s ease-in-out;
+			line-height: 10;
+			font-size: 2em;
+			// font-family: 'Lobster';
+			color: #fff;
+			// content:'Budgie';
+			position:absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			display:none;
+			opacity:0;
+		}
+
+	&:hover {
+		transition: all .25s ease-in-out;
+		&:after {
+			pointer-events:none;
+			transition: all .25s ease-in-out;
+			display:block;
+			opacity:1;
+		}
+		// background-image: linear-gradient(
+		// 		rgba(24, 130, 145, 0.40),
+		// 		rgba(24, 130, 145, 0.40)
+		// 	), url('../img/project-bg/budgie.png');
+		// background-size: 125%;
+	}
 }
 
 
@@ -483,7 +580,7 @@ a {
 	}
 
 	.main-index .work {
-		height: 30vh;
+		height: 50vh;
 		padding: 0;
 	}
 
@@ -498,6 +595,6 @@ a {
 }
 
 .wrapper, .wrapper-main {
-	max-width: 1200px;
+	max-width: 2000px;
 	margin: 0 auto;
 }
