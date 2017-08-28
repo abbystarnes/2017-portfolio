@@ -492,7 +492,7 @@ documentation](https://dev.twitter.com/docs/cards).
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@site_account">
 <meta name="twitter:creator" content="@individual_account">
-<meta name="twitter:url" content="http://www.example.com/path/to/page.html">
+<meta name="twitter:url" content="http://www.example.com/path/to/page">
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="http://www.example.com/path/to/image.jpg">
@@ -533,12 +533,12 @@ This can be done by adding the following annotations in your HTML pages:
 * on the desktop page, add the `link rel="alternate"` tag pointing to the
   corresponding mobile URL, e.g.:
 
-  `<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.example.com/page.html" >`
+  `<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.example.com/page" >`
 
 * on the mobile page, add the `link rel="canonical"` tag pointing to the
   corresponding desktop URL, e.g.:
 
-  `<link rel="canonical" href="http://www.example.com/page.html">`
+  `<link rel="canonical" href="http://www.example.com/page">`
 
 For more information please see:
 
