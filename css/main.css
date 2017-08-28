@@ -3,6 +3,10 @@
   margin: 0 auto;
   position: relative; }
 
+.header-content .fa {
+  font-size: 1.5em;
+  vertical-align: baseline; }
+
 body {
   transition: offsetTop 2s ease; }
 
