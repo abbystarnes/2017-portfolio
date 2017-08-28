@@ -99,7 +99,7 @@ header h1 {
   font-family: 'Lobster', cursive; }
   header h1:hover, header h1:active, header h1:focus {
     transition: all .125s ease;
-    color: rgba(255, 255, 255, 0.5); }
+    color: #C1DEE2; }
 
 .hidden {
   margin-left: -9999px;
