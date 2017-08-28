@@ -384,9 +384,9 @@ li {
       padding: .125em;
       transition: all .5s ease;
       text-align: center; }
-    .tech-list li:hover, .tech-list li:active, .tech-list li:focus {
+    .tech-list li img:hover, .tech-list li img:active, .tech-list li img:focus {
       cursor: pointer; }
-      .tech-list li:hover p, .tech-list li:active p, .tech-list li:focus p {
+      .tech-list li img:hover + p, .tech-list li img:active + p, .tech-list li img:focus + p {
         transition: all .5s ease;
         opacity: 1;
         text-align: center;
