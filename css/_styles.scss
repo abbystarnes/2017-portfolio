@@ -17,6 +17,13 @@ body {
 		border: none;
 		outline: none;
 	}
+	i {
+		transition: all .125s ease;
+		&:hover, &:focus, &:active {
+			transition: all .125s ease;
+			color: rgba(255,255,255, .5);
+		}
+	}
 }
 
 #email {
