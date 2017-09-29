@@ -75,7 +75,7 @@ body {
 
 header {
   padding-bottom: 2em;
-  background-image: linear-gradient(rgba(24, 130, 145, 0.4), rgba(24, 130, 145, 0.8));
+  background-image: linear-gradient(rgba(0, 0, 145, 0.4), rgba(24, 130, 145, 0.8));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
