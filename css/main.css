@@ -194,64 +194,75 @@ li {
     margin-top: 0;
     margin-bottom: 0; }
   .work:first-child {
-    background-image: url("../img/project-bg/budgie.png");
+    background-image: url("../img/project-bg/mandala.png");
     background-size: 105%;
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
     .work:first-child:after {
-      content: 'Budgie'; }
+      content: 'Mandala'; }
     .work:first-child:hover {
-      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/budgie.png");
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/mandala.png");
       background-size: 125%; }
   .work:nth-child(2) {
+    background-image: url("../img/project-bg/budgie.png");
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; }
+    .work:nth-child(2):after {
+      content: 'Budgie'; }
+    .work:nth-child(2):hover {
+      background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/budgie.png");
+      background-size: 125%; }
+  .work:nth-child(3) {
     background-image: url("../img/project-bg/shelter.png");
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: center; }
-    .work:nth-child(2):after {
+    .work:nth-child(3):after {
       content: 'Shelter'; }
-    .work:nth-child(2):hover {
+    .work:nth-child(3):hover {
       background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/shelter.png");
       background-size: 175%; }
-  .work:nth-child(3) {
+  .work:nth-child(4) {
     background-image: url("../img/project-bg/image_api.png");
     background-size: 115%;
     background-repeat: no-repeat;
     background-position: center; }
-    .work:nth-child(3):after {
+    .work:nth-child(4):after {
       content: 'SVG Generating API'; }
-    .work:nth-child(3):hover {
+    .work:nth-child(4):hover {
       background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/image_api.png");
       background-size: 135%; }
-  .work:nth-child(4) {
+  .work:nth-child(5) {
     background-image: url("../img/project-bg/reddit.png");
     background-size: 135%;
     background-repeat: no-repeat;
     background-position: center; }
-    .work:nth-child(4):after {
+    .work:nth-child(5):after {
       content: 'Reddit Clone'; }
-    .work:nth-child(4):hover {
+    .work:nth-child(5):hover {
       background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/reddit.png");
       background-size: 155%; }
-  .work:nth-child(5) {
+  .work:nth-child(6) {
     background-image: url("../img/project-bg/frogger.png");
     background-size: 105%;
     background-repeat: no-repeat;
     background-position: center; }
-    .work:nth-child(5):after {
+    .work:nth-child(6):after {
       content: 'Frogger'; }
-    .work:nth-child(5):hover {
+    .work:nth-child(6):hover {
       background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/frogger.png");
       background-size: 125%; }
-  .work:nth-child(6) {
+  .work:nth-child(7) {
     background-image: url("../img/project-bg/bar_chart.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom; }
-    .work:nth-child(6):after {
+    .work:nth-child(7):after {
       content: 'Bar Chart'; }
-    .work:nth-child(6):hover {
+    .work:nth-child(7):hover {
       background-image: linear-gradient(rgba(24, 130, 145, 0.8), rgba(24, 130, 145, 0.8)), url("../img/project-bg/bar_chart.png");
       background-size: 125%; }
 
