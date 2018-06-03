@@ -502,3 +502,8 @@ li {
 .wrapper, .wrapper-main {
   max-width: 2000px;
   margin: 0 auto; }
+
+a {
+  color: #3A9DAB; }
+  a:hover {
+    color: #188291; }
